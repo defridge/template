@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Template</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <h1>Website Title</h1>
+        <!-- Burger Icon for Mobile Navigation -->
+        <div class="burger" onclick="toggleNav()">☰</div>
+        <nav id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="dropdown">
+              <a href="#more">More</a>
+              <ul class="dropdown-content">
+                <li><a href="#option1">Option 1</a></li>
+                <li><a href="#option2">Option 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Body Section -->
+    <main class="container">
+      <section id="home">
+        <h2>Welcome to the Website</h2>
+        <p>
+          This is the main content area where you can customize text and images.
+        </p>
+      </section>
+
+      <!-- Cards Section -->
+      <section class="cards">
+        <div class="card">
+          <h3>Card Title 1</h3>
+          <p>Card content goes here.</p>
+        </div>
+        <div class="card">
+          <h3>Card Title 2</h3>
+          <p>Card content goes here.</p>
+        </div>
+      </section>
+
+      <!-- Accordion Section -->
+      <section class="accordion">
+        <button class="accordion-toggle">Accordion 1</button>
+        <div class="accordion-content">
+          <p>Content for the first accordion.</p>
+        </div>
+        <button class="accordion-toggle">Accordion 2</button>
+        <div class="accordion-content">
+          <p>Content for the second accordion.</p>
+        </div>
+      </section>
+
+      <!-- Carousel Section -->
+      <section class="carousel">
+        <div class="carousel-slide">Slide 1</div>
+        <div class="carousel-slide">Slide 2</div>
+        <div class="carousel-slide">Slide 3</div>
+      </section>
+
+      <!-- Form Section -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

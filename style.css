@@ -1,0 +1,177 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #444;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Burger Icon (Mobile Navigation) */
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Hide the Navigation Links by Default on Mobile */
+#nav-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #333;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  #nav-menu.show .nav-links {
+    display: flex;
+  }
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+  padding: 6rem 0 0 0;
+  flex: 1; /* Pushes the footer to the bottom of the page */
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Accordion */
+.accordion-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background: #f4f4f4;
+}
+
+.accordion-toggle.active + .accordion-content {
+  display: block;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
